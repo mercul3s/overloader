@@ -10,6 +10,9 @@ class Timer
   end
 
   def elapsed
-    @end_time - @start_time
+    if @start_time != nil and @end_time != nil
+      @elapsed = @end_time - @start_time
+    end
+    return @elapsed
   end
 end
