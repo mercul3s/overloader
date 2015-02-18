@@ -1,4 +1,5 @@
 require 'sinatra'
+load 'lib/sender.rb'
 
 # Overloader is a simple web app for testing data applications.
 # At its core, it is designed to send data, validate that data, and cleanup
@@ -8,4 +9,12 @@ require 'sinatra'
 
 get '/' do
   erb :index
+end
+
+post 'target_host' do
+  initialize_target(hostname)
+end
+
+def initialize_target(hostname)
+
 end

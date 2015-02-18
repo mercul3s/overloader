@@ -1,4 +1,5 @@
 require 'rest-client'
+load 'lib/timer.rb'
 
 # This class is responsible for handling all http requests
 class Sender
@@ -18,7 +19,6 @@ class Sender
     @response = @resource.get
     @timer.end
     @request_time = @timer.elapsed
-
   end
 
   def post_request(payload)
