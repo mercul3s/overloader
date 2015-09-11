@@ -6,6 +6,7 @@ class Sender
 
   attr_accessor :request_time
   attr_accessor :response
+  attr_accessor :timer
 
   def initialize(host)
     @resource     = RestClient::Resource.new(host)
